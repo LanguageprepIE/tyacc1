@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pythagoras — Easy Guide & Practice</title>
+
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page header -->
+  <header class="site-header">
+    <h1>Pythagoras Made Easy</h1>
+    <p class="tagline">Learn the formula, see a worked example, avoid common mistakes, and practise with a quiz.</p>
+  </header>
+
+  <main class="container">
+    <!-- Explanation card -->
+    <section class="card" id="explain">
+      <h2>What is Pythagoras?</h2>
+      <p>In a right-angled triangle, the square of the hypotenuse (the longest side) equals the sum of the squares of the two shorter sides.</p>
+      <div class="formula">
+        <span class="var">a</span><sup>2</sup> + <span class="var">b</span><sup>2</sup> = <span class="var">c</span><sup>2</sup>
+        <div class="note">Here, c is the hypotenuse.</div>
+      </div>
+    </section>
+
+    <!-- Worked example card -->
+    <section class="card" id="example">
+      <h2>Worked Example</h2>
+      <p>Find the hypotenuse when the two short sides are 6 and 8.</p>
+      <ol>
+        <li>Use the formula: a² + b² = c²</li>
+        <li>Compute: 6² + 8² = 36 + 64 = 100</li>
+        <li>So c² = 100 → c = √100 = 10</li>
+      </ol>
+      <div class="big-answer">Answer: c = 10</div>
+    </section>
+
+    <!-- Common mistakes card -->
+    <section class="card" id="mistakes">
+      <h2>Common Mistakes</h2>
+      <ul>
+        <li>Using Pythagoras for non-right triangles — it only works for right-angled triangles.</li>
+        <li>Mixing up which side is c — c is always the side opposite the right angle (the longest side).</li>
+        <li>Forgetting to take the square root at the end when solving for a side.</li>
+      </ul>
+    </section>
+
+    <!-- Practice problems card -->
+    <section class="card" id="practice">
+      <h2>Try These (Practice)</h2>
+      <p>Solve and press "Check" to see a step-by-step answer.</p>
+
+      <div class="practice-list">
+        <div class="practice-item">
+          <label>1) a = 3, b = 4 → c =</label>
+          <input type="number" inputmode="numeric" class="practice-input" data-a="3" data-b="4" />
+          <button class="btn small check-btn">Check</button>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="practice-item">
+          <label>2) a = 9, b = 12 → c =</label>
+          <input type="number" inputmode="numeric" class="practice-input" data-a="9" data-b="12" />
+          <button class="btn small check-btn">Check</button>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="practice-item">
+          <label>3) c = 13, a = 5 → b =</label>
+          <input type="number" inputmode="numeric" class="practice-input" data-c="13" data-a="5" />
+          <button class="btn small check-btn">Check</button>
+          <div class="feedback"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz card -->
+    <section class="card" id="quiz">
+      <h2>Quick 5-question Quiz</h2>
+      <p>Select an answer — you will get instant feedback.</p>
+
+      <form id="quiz-form" class="quiz-form" autocomplete="off">
+        <!-- Question 1 -->
+        <fieldset class="question" data-answer="across">
+          <legend>1) What is the hypotenuse?</legend>
+          <label><input type="radio" name="q1" value="across"> The side across from the right angle</label>
+          <label><input type="radio" name="q1" value="next"> One of the short sides next to the right angle</label>
+          <label><input type="radio" name="q1" value="angle"> The right angle itself</label>
+          <div class="q-feedback"></div>
+        </fieldset>
+
+        <!-- Question 2 -->
+        <fieldset class="question" data-answer="5">
+          <legend>2) If a = 3 and b = 4, what is c?</legend>
+          <label><input type="radio" name="q2" value="5"> 5</label>
+          <label><input type="radio" name="q2" value="6"> 6</label>
+          <label><input type="radio" name="q2" value="7"> 7</label>
+          <div class="q-feedback"></div>
+        </fieldset>
+
+        <!-- Question 3 -->
+        <fieldset class="question" data-answer="a2+b2=c2">
+          <legend>3) Which equation is Pythagoras' theorem?</legend>
+          <label><input type="radio" name="q3" value="a2+b2=c2"> a² + b² = c²</label>
+          <label><input type="radio" name="q3" value="a+b=c"> a + b = c</label>
+          <label><input type="radio" name="q3" value="a2-b2=c2"> a² − b² = c²</label>
+          <div class="q-feedback"></div>
+        </fieldset>
+
+        <!-- Question 4 -->
+        <fieldset class="question" data-answer="12">
+          <legend>4) If c = 13 and a = 5, what is b?</legend>
+          <label><input type="radio" name="q4" value="10"> 10</label>
+          <label><input type="radio" name="q4" value="12"> 12</label>
+          <label><input type="radio" name="q4" value="8"> 8</label>
+          <div class="q-feedback"></div>
+        </fieldset>
+
+        <!-- Question 5 -->
+        <fieldset class="question" data-answer="false">
+          <legend>5) True or False: Pythagoras works for every triangle.</legend>
+          <label><input type="radio" name="q5" value="true"> True</label>
+          <label><input type="radio" name="q5" value="false"> False</label>
+          <div class="q-feedback"></div>
+        </fieldset>
+
+        <div class="quiz-controls">
+          <button type="button" id="reset-quiz" class="btn">Reset Quiz</button>
+          <div id="score" class="score">Score: 0 / 5</div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="card footer">
+      <small>Tip: Draw the triangle and label the sides a, b and c. That helps you know which side is the hypotenuse.</small>
+    </footer>
+  </main>
+
+  <!-- Link to external JavaScript (deferred so DOM is ready) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
